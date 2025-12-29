@@ -1,0 +1,120 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.task-container {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 20px 0;
+}
+.list-item {
+    padding: 12px; 
+    margin: 8px 0;
+    background: #f8f9fa; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+#add-task-btn {
+    padding: 12px 24px;
+    background: #007bff;
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#add-task-btn:hover { 
+    background: #0056b3;
+}
+#task-input {
+    padding: 12px;
+    width: 250px;
+    border: 2px solid #ddd; 
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+button[onclick] {
+    background: #dc3545;
+    color: white;
+    border: none; 
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.list-item.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;  
+}
+
+#clear-completed {
+    background:  #6c757d;
+    margin-left: 10px;
+}
+
+#counter-tasks {
+    margin-left: 10px;
+}
+
+#clear-completed {
+    padding: 8px 16px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#clear-completed:hover {
+    background: #545b62;
+}
+#clear-completed:disabled {
+    background: #dee2e6;
+    cursor: not-allowed;
+}
+
+#task-input.error {
+    border-color: #dc3545 !important;
+}
+
+#task-input.error:focus {
+    border-color: #c82333;
+}
+
+#task-input:valid {
+    border-color: #28a745;
+}
+
+.error-message {
+    display: none;  
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: rgba(220, 53, 69, 0.1);
+    border-left: 4px solid #dc3545;
+    max-width: 400px;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.list-item.editing {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+}
+
+.list-item.editing span {
+    background: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    border: 2px solid #ffc107;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-blue-50 min-h-screen p-8">
+
+    <div class="max-w-md mx-auto bg-white rounded-2xl shadow-xl p-8 space-y-6">
+        <h1>Список задач</h1>
+        <ul class="task-container"></ul>
+        <input id="task-input" placeholder="Введите задачу" maxLength='100'> 
+        <button id="add-task-btn">Добавить задачу</button>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <div>
+        <button onclick="setFilter('all')">Все</button>
+        <button onclick="setFilter('active')">Активные</button>
+        <button onclick="setFilter('completed')">Завершенные</button>
+        <button id="clear-completed">Очистить завершенные</button>
+        <span id="counter-tasks"></span>
+    </div>
+
+    <script src="Index.js"></script>
+</body>
+</html>
