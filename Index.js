@@ -2,11 +2,12 @@ let tasksArray = [];
 let currentFilter = 'all';  
 let tasksContainer, taskInput, addTaskBtn, counterTasks, btnClearCompleted, errorMsg;
 
-
 function setFilter(filter) {
     currentFilter = filter;
     renderTasks();
 }
+
+window.setFilter = setFilter;
 
 document.addEventListener('DOMContentLoaded', () => {
     tasksArray = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -20,11 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     errorMsg = document.getElementById('error-message');    
 
     taskInput.addEventListener('input', validateInput);
-
-    addTaskBtn.onclick = addTask;
     taskInput.addEventListener('keypress', e => e.key === 'Enter' && addTask());
-    renderTasks();  
+    addTaskBtn.onclick = addTask;
 
+    renderTasks();  
 });
 
 function getFilteredTasks () {
